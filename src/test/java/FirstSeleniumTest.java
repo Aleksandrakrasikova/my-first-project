@@ -5,8 +5,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class FirstSeleniumTest {
     @Test
     public void openHomePageCheck() {
-        System.setProperty("webdriver.chrome.driver", "/Users/aleksandrakrasikova/Downloads/chomedriver");
+        System.setProperty("webdriver.chrome.driver", "/Users/aleksandrakrasikova/Downloads/chromedriver");
         WebDriver browser = new ChromeDriver();
         browser.get("http://www.discovercars.com/");
     }
 }
+
