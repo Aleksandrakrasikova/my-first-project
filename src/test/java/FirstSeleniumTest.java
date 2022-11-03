@@ -25,15 +25,14 @@ public class FirstSeleniumTest {
         wait.until(ExpectedConditions.elementToBeClickable(ACCEPT_COOKIES_BTN));
         browser.findElement(ACCEPT_COOKIES_BTN).click();
 
-        browser.findElement(By.linkText("Latvia")).click();
-
-        String lat = "Car Rental in Latvia";
+/*        browser.findElement(By.linkText("Latvia")).click();
+*//*        String lat = "Car Rental in Latvia";
         browser.findElement(By.xpath(".//div[@class = 'col-12']/h1")).getText();
         if (browser.getPageSource().contains("Latvia")) {
-            System.out.println("Word:" + lat + "is present.");
+            System.out.println("Word: " + lat + "is present.");
         } else {
-            System.out.println("Word:" + lat + "is not present.");
-        }
+            System.out.println("Word: " + lat + "is not present.");
+        }*/
     }
 }
 
