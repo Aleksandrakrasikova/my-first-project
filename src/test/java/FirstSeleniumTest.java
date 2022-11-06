@@ -12,8 +12,6 @@ import java.util.List;
 
 public class FirstSeleniumTest {
     private final By ACCEPT_COOKIES_BTN = By.id("onetrust-accept-btn-handler");
-    private final By CAR_RENTAL_IN_LATVIA = By.xpath(".//div[@class = 'col-12']/h1");
-
 
 
     @Test
