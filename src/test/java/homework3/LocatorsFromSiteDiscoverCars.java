@@ -52,5 +52,10 @@ public class LocatorsFromSiteDiscoverCars {
 
     private final By PARTIAL_PAYMENT_FOR_THIRD_CAR = By.xpath(".//div[@data-car-id = 'AR54']/div//span[@class = 'dc-ui badge badge-medium badge-blue']");
 
+    private final By WE_ARE_CURRENTLY_SEARCHING = By.xpath(".//div[contains(text(),'We are currently searching . . .')]");
+
+    private final By BEST_AVAILABLE_OFFERS = By.xpath(".//div[contains(text(),'for the best')]");
+
+
     }
 
