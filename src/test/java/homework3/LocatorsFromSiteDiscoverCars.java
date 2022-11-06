@@ -52,5 +52,5 @@ public class LocatorsFromSiteDiscoverCars {
 
     private final By PARTIAL_PAYMENT_FOR_THIRD_CAR = By.xpath(".//div[@data-car-id = 'AR54']/div//span[@class = 'dc-ui badge badge-medium badge-blue']");
 
-}
+    }
 
