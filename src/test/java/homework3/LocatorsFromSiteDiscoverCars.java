@@ -56,6 +56,7 @@ public class LocatorsFromSiteDiscoverCars {
 
     private final By BEST_AVAILABLE_OFFERS = By.xpath(".//div[contains(text(),'for the best')]");
 
+    private final By SEARCHING = By.xpath(".//div[@class = 'lds-ellipsis v2']");
 
     }
 
