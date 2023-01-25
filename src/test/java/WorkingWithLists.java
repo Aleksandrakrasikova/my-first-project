@@ -37,6 +37,7 @@ public class WorkingWithLists {
         //------FOREACH with IF--------
         System.out.println("Printing students with phone nr starting with +371:");
         for (Student s : students) {
+
             if (s.getPhone().startsWith("+371")) {
                 System.out.println(s.getFullName());
             }
