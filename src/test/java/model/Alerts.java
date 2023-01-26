@@ -12,6 +12,8 @@ public class Alerts {
     private long start;
     private long end;
     private String description;
+    private String tags;
+
 
     public String getSenderName() {
         return senderName;
@@ -51,5 +53,13 @@ public class Alerts {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getTags() {
+        return tags;
+    }
+
+    public void setTags(String tags) {
+        this.tags = tags;
     }
 }
