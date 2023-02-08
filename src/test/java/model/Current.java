@@ -32,7 +32,7 @@ public class Current {
     @JsonProperty("wind_gust")
     private double windGust;
 
-    List <Weather> weather;
+    List <Weathers> weathers;
 
     public long getDt() {
         return dt;
@@ -146,11 +146,11 @@ public class Current {
         this.windGust = windGust;
     }
 
-    public List<Weather> getWeather() {
-        return weather;
+    public List<Weathers> getWeather() {
+        return weathers;
     }
 
-    public void setWeather(List<Weather> weather) {
-        this.weather = weather;
+    public void setWeather(List<Weathers> weathers) {
+        this.weathers = weathers;
     }
 }

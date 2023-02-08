@@ -34,7 +34,7 @@ public class AmazonBooks {
         String books = "books";
         String menuItemToSelect = "Best Sellers";
 
-        System.setProperty("webdriver.chrome.driver", "/Users/aleksandrakrasikova/Downloads/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/Users/aleksandrakrasikova/Desktop/chromedriver");
         browser = new ChromeDriver();
         browser.manage().window().maximize();
         browser.get("http://www.amazon.de/");

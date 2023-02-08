@@ -1,8 +1,6 @@
 package model;
 
-import io.cucumber.core.internal.com.fasterxml.jackson.annotation.JsonProperty;
-
-public class Weather {
+public class Weathers {
     private int id;
     private String main;
     private String description;
