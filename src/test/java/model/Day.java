@@ -14,10 +14,10 @@ public class Day {
     @JsonProperty("moon_phase")
     private int moonPhase;
 
-    List <Temperature> temp;
+    private Temperature temp;
 
     @JsonProperty ("feels_like")
-    List <FeelsLike> feelsLike;
+    private FeelsLike feelsLike;
 
     private int pressure;
     private int humidity;
@@ -34,7 +34,7 @@ public class Day {
     @JsonProperty ("wind_gust")
     private double windGust;
 
-    List <Weathers> weathers;
+    List <Weather> weathers;
 
     private int clouds;
     private double pop;
@@ -89,19 +89,19 @@ public class Day {
         this.moonPhase = moonPhase;
     }
 
-    public List<Temperature> getTemp() {
+    public Temperature getTemp() {
         return temp;
     }
 
-    public void setTemp(List<Temperature> temp) {
+    public void setTemp(Temperature temp) {
         this.temp = temp;
     }
 
-    public List<FeelsLike> getFeelsLike() {
+    public FeelsLike getFeelsLike() {
         return feelsLike;
     }
 
-    public void setFeelsLike(List<FeelsLike> feelsLike) {
+    public void setFeelsLike(FeelsLike feelsLike) {
         this.feelsLike = feelsLike;
     }
 
@@ -153,11 +153,11 @@ public class Day {
         this.windGust = windGust;
     }
 
-    public List<Weathers> getWeather() {
+    public List<Weather> getWeathers() {
         return weathers;
     }
 
-    public void setWeather(List<Weathers> weathers) {
+    public void setWeathers(List<Weather> weathers) {
         this.weathers = weathers;
     }
 
