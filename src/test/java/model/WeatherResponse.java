@@ -17,7 +17,7 @@ public class WeatherResponse {
 
     private Current currents;
 
-    private List<Weather> weathers;
+    private List<Weather> weather;
 
     private List<Minute> minutely;
     private List<Hour> hourly;
@@ -68,12 +68,12 @@ public class WeatherResponse {
         this.currents = currents;
     }
 
-    public List<Weather> getWeathers() {
-        return weathers;
+    public List<Weather> getWeather() {
+        return weather;
     }
 
-    public void setWeathers(List<Weather> weathers) {
-        this.weathers = weathers;
+    public void setWeather(List<Weather> weather) {
+        this.weather = weather;
     }
 
     public List<Minute> getMinutely() {

@@ -28,7 +28,7 @@ Feature: Weather forecast
       | wind_deg    | 360        |
       | wind_gust   | 13.89      |
 
-    And current weather Nr. 1 is:
+    And current weather is:
       | id          | 802              |
       | main        | Clouds           |
       | description | scattered clouds |
@@ -53,7 +53,7 @@ Feature: Weather forecast
       | wind_gust  | 10.71      |
       | pop        | 0.03       |
 
-    And hourly weather Nr. 2 is:
+    And hourly weather is:
       | id          | 803           |
       | main        | Clouds        |
       | description | broken clouds |
@@ -91,7 +91,7 @@ Feature: Weather forecast
       | eve   | 273.35 |
       | morn  | 277.66 |
 
-    And daily weather Nr. 3 is:
+    And daily weather is:
       | id          | 500        |
       | main        | Rain       |
       | description | light rain |

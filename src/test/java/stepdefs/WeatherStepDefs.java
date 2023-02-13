@@ -38,15 +38,18 @@ public class WeatherStepDefs {
 
     @Then("timezone information is:")
     public void check_timezone(Map<String, String> params) {
+        Assertions.assertEquals(params.get("timezone"), response.getTimezone(), "Wrong timezone!");
+        Assertions.assertEquals(params.get("timezone_offset"),response.getTimezoneOffset(), "Wrong timezone offset!");
 
     }
 
     @Then("current weather data is:")
     public void check_current_weather(Map<String, String> params) {
+        //Assertions.assertEquals(params.get("time),response.get);
 
     }
 
-    @Then("current weather Nr. {int} is:")
+    @Then("current weather is:")
     public void check_weather(Map<String, String> params) {
 
     }
@@ -61,7 +64,7 @@ public class WeatherStepDefs {
 
     }
 
-    @Then("hourly weather Nr. {int} is:")
+    @Then("hourly weather is:")
     public void check_hour_weather(Map<String, String> params) {
 
     }
@@ -81,7 +84,7 @@ public class WeatherStepDefs {
 
     }
 
-    @Then("daily weather Nr. 3 is:")
+    @Then("daily weather is:")
     public void check_daily_current_weather(Map<String, String> params) {
 
     }
