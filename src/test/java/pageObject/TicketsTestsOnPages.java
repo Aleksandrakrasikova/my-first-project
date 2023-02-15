@@ -3,6 +3,7 @@ package pageObject;
 import org.apache.commons.lang3.RandomUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import pageObject.model.FlightInfo;
 import pageObject.model.Passenger;
 import pageObject.pages.HomePage;
 import pageObject.pages.PassengerInfoPage;
@@ -11,29 +12,30 @@ import pageObject.pages.SuccessfulRegistrationPage;
 
 public class TicketsTestsOnPages {
     private final String URL = "http://www.qaguru.lv:8089/tickets/";
-    private final String FROM_AIRPORT = "RIX";
-    private final String TO_AIRPORT = "SFO";
 
     private BaseFunc baseFunc = new BaseFunc();
 
     @Test
     public void successfulRegistrationTest (){
-        Passenger passenger = new Passenger("Aleksandra", "Krasikova", "AAAAA", 2,
-                2,4, "16-05-2018");
+        Passenger passenger = new Passenger("Aleksandra", "Krasikova");
         int seatNr = RandomUtils.nextInt(1, 35);
+
+        FlightInfo info = new FlightInfo("SFO", "RIX", "AAAAA", 2, 2,
+                4, "16-05-2018", seatNr);
+        info.setPassenger(passenger);
 
         baseFunc.openUrl(URL);
         HomePage homePage = new HomePage(baseFunc);
-        homePage.selectAirports(FROM_AIRPORT, TO_AIRPORT);
+        homePage.selectAirports(info.getDeparture(), info.getDestination());
 
         PassengerInfoPage infoPage = new PassengerInfoPage(baseFunc);
-        infoPage.fillInPassengerInfo(passenger);
+        infoPage.fillInPassengerInfo(info);
 
         Assertions.assertEquals(passenger.getFirstName(), infoPage.getPassengerName(), "Wrong name!");
-        Assertions.assertEquals(FROM_AIRPORT, infoPage.getFirstFromAirport(), "Wrong departure airport!");
-        Assertions.assertEquals(FROM_AIRPORT, infoPage.getSecondFromAirport(), "Wrong departure airport2!");
-        Assertions.assertEquals(TO_AIRPORT, infoPage.getFirstToAirport(), "Wrong arrival airport!");
-        Assertions.assertEquals(TO_AIRPORT, infoPage.getSecondToAirport(), "Wrong arrival airport2!");
+        Assertions.assertEquals(info.getDeparture(), infoPage.getFirstFromAirport(), "Wrong departure airport!");
+        Assertions.assertEquals(info.getDeparture(), infoPage.getSecondFromAirport(), "Wrong departure airport2!");
+        Assertions.assertEquals(info.getDestination(), infoPage.getFirstToAirport(), "Wrong arrival airport!");
+        Assertions.assertEquals(info.getDestination(), infoPage.getSecondToAirport(), "Wrong arrival airport2!");
 
         Assertions.assertTrue(infoPage.getPrice().length() > 0, "Wrong price!");
 

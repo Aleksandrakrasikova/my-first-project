@@ -2,6 +2,7 @@ package requesters;
 
 import io.cucumber.core.internal.com.fasterxml.jackson.core.JsonProcessingException;
 import io.cucumber.core.internal.com.fasterxml.jackson.databind.ObjectMapper;
+import model.Current;
 import model.WeatherResponse;
 import org.springframework.web.client.RestTemplate;
 
@@ -16,5 +17,17 @@ public class WeatherRequester {
 
         ObjectMapper objectMapper = new ObjectMapper();
         return objectMapper.readValue(jsonToParse, WeatherResponse.class);
+
     }
+
+    /*public Current requestCurrent(long cityId) throws JsonProcessingException {
+        String url = PREFIX + cityId;
+
+        RestTemplate restTemplate = new RestTemplate();
+        String jsonToParse = restTemplate.getForEntity(url, String.class).getBody();
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        return objectMapper.readValue(jsonToParse, Current.class);
+
+    }*/
 }
