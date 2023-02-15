@@ -13,7 +13,7 @@ Feature: Weather forecast
       | timezone_offset | -18000           |
 
     And current weather data is:
-      | time        | 1646318698 |
+      | dt          | 1646318698 |
       | sunrise     | 1646306882 |
       | sunset      | 1646347929 |
       | temperature | 282.21     |
